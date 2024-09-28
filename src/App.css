@@ -1,0 +1,729 @@
+/* Basic reset for consistent styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f8ff; /* Soft light blue background */
+  border-bottom: 3px solid #ffcc00; /* Bright yellow border */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #ff6347; /* Tomato color */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff6347; /* Change to tomato color on hover */
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.sign-up-btn,
+.login-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up-btn {
+  background-color: #ffcc00; /* Bright yellow */
+  color: #000;
+}
+
+.sign-up-btn:hover {
+  background-color: #ffa500; /* Orange on hover */
+}
+
+.login-btn {
+  background-color: #4caf50; /* Green */
+  color: #fff;
+}
+
+.login-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  min-height: 80vh; /* Ensures the hero section covers most of the viewport */
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #ff6347; /* Tomato color */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.explore-btn,
+.play-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.explore-btn {
+  background-color: #ffcc00; /* Bright yellow */
+  color: #000;
+}
+
+.explore-btn:hover {
+  background-color: #ffa500; /* Darker yellow on hover */
+  transform: scale(1.05);
+}
+
+.play-btn {
+  background-color: #4caf50; /* Green */
+  color: #fff;
+}
+
+.play-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05);
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  animation: float 3s ease-in-out infinite; /* Fun floating effect for the image */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+}
+/* Features Section Styles */
+.features-section {
+  padding: 60px 20px;
+  background-color: #fff7e6; /* Light cream background */
+  text-align: center;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  color: #ff6347; /* Tomato color */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 40px;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #f9f9f9; /* Light background for card */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #ffcc00; /* Bright yellow */
+  margin-bottom: 15px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    margin-bottom: 20px;
+  }
+}
+/* Popular Courses Section Styles */
+.courses-section {
+  padding: 60px 20px;
+  background-color: #e0f7fa; /* Light turquoise background */
+  text-align: center;
+}
+
+.courses-title {
+  font-size: 2.5rem;
+  color: #ff6347; /* Tomato color */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 40px;
+}
+
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.course-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-image {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.course-title {
+  font-size: 1.5rem;
+  color: #ffcc00; /* Bright yellow */
+  margin-bottom: 15px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.course-description {
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+}
+
+.learn-more-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #4caf50; /* Green */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .courses-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-container {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    margin-bottom: 20px;
+  }
+}
+/* Interactive Games Section Styles */
+.games-section {
+  padding: 60px 20px;
+  background-color: #e0ffe0; /* Light green background */
+  text-align: center;
+}
+
+.games-title {
+  font-size: 2.5rem;
+  color: #ff6347; /* Tomato color */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 40px;
+}
+
+.games-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.game-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-image {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.game-title {
+  font-size: 1.5rem;
+  color: #ffcc00; /* Bright yellow */
+  margin-bottom: 15px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.game-description {
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+}
+
+.play-now-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #4caf50; /* Green */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-now-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .games-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .games-container {
+    grid-template-columns: 1fr;
+  }
+
+  .game-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* How It Works Section Styles */
+.how-it-works-section {
+  padding: 60px 20px;
+  background-color: #fff5e6; /* Soft peach background */
+  text-align: center;
+}
+
+.how-it-works-title {
+  font-size: 2.5rem;
+  color: #ff6347; /* Tomato color */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 40px;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.step-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.step-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  color: #4caf50; /* Green */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    margin-bottom: 20px;
+  }
+}
+/* Subscription Plans Section Styles */
+.subscription-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light grey background */
+  text-align: center;
+}
+
+.subscription-title {
+  font-size: 2.5rem;
+  color: #ff6347; /* Tomato color */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 40px;
+}
+
+.plans-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.plan-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-title {
+  font-size: 1.8rem;
+  color: #4caf50; /* Green for the plan title */
+  margin-bottom: 10px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.plan-price {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.plan-features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.plan-feature {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.plan-btn {
+  padding: 12px 30px;
+  background-color: #4caf50; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plan-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Highlighted Plan (Standard) */
+.highlight {
+  background-color: #ffebcd; /* Light orange to highlight the popular plan */
+  border: 2px solid #ff6347; /* Tomato color for the border */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .plans-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .plans-container {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card {
+    margin-bottom: 20px;
+  }
+}
+/* Newsletter Sign-Up Section Styles */
+.newsletter-section {
+  padding: 60px 20px;
+  background-color: #f0f8ff; /* Light blue background */
+  text-align: center;
+}
+
+.newsletter-title {
+  font-size: 2.5rem;
+  color: #ff6347; /* Tomato color */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin-bottom: 20px;
+}
+
+.newsletter-description {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+}
+
+.newsletter-input {
+  padding: 15px;
+  border: 2px solid #4caf50; /* Green border */
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  width: 300px;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-input:focus {
+  border-color: #45a049; /* Darker green on focus */
+}
+
+.newsletter-btn {
+  padding: 15px 30px;
+  background-color: #4caf50; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.newsletter-message {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #4caf50; /* Green for success message */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .newsletter-input {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+/* Footer Styles */
+.footer {
+  background-color: #4caf50; /* Green background */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px; /* Minimum width for each section */
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  color: #fff; /* White color for titles */
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffebcd; /* Light orange on hover */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between icons */
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    align-items: center;
+  }
+}
